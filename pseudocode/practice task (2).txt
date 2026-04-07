@@ -1,0 +1,598 @@
+Task 11 : 
+
+START
+
+  
+
+	FOR Score from 1 to 5 
+
+		DISPLAY "Enter score for student "
+        	READ SCORE
+
+		
+		IF SCORE >= 85 THEN
+            		DISPLAY "Excellent"
+        	ELSEIF SCORE >= 50 THEN
+           		 DISPLAY "Pass"
+        	ELSE
+            		DISPLAY "Fail"
+        	END IF
+
+    END REPEAT
+			
+   
+  
+
+STOP
+
+Task 12 : 
+
+
+START
+
+	BEGIN
+
+		SET SCORE = 0
+    		SET TOTAL = 0
+   		SET AVERAGE = 0
+    		SET PASS_COUNT = 0
+   		SET FAIL_COUNT = 0
+
+		FOR Score from 1 to 5 
+
+			DISPLAY "Enter SCORE for student "
+        		READ SCORE
+
+			SET TOTAL = TOTAL + SCORE	
+
+			
+
+			IF SCORE >= 85 THEN
+            			DISPLAY "Excellent"
+            			SET PASS_COUNT = PASS_COUNT + 1
+        		ELSE IF SCORE >= 50 THEN
+            			DISPLAY "Pass"
+            			SET PASS_COUNT = PASS_COUNT + 1
+        		ELSE
+            			DISPLAY "Fail"
+            			SET FAIL_COUNT = FAIL_COUNT + 1
+        		END IF
+
+		 END REPEAT
+
+		 SET AVERAGE = TOTAL / 5
+
+    
+    		DISPLAY "Total Score: ", TOTAL
+    		DISPLAY "Average Score: ", AVERAGE
+   		DISPLAY "Number of Passed Students: ", PASS_COUNT
+   		DISPLAY "Number of Failed Students: ", FAIL_COUNT
+	
+
+	 END
+
+
+	
+
+
+STOP
+
+Task 13 :
+
+START
+
+	BEGIN
+    		SET USERNAME = ""
+    		SET PASSWORD = ""
+    		SET ATTEMPTS = 3
+   		SET LOGGED_IN = FALSE
+
+		WHILE ATTEMPTS > 0 AND LOGGED_IN = FALSE
+
+			DISPLAY "Enter username:"
+       			READ USERNAME
+
+			DISPLAY "Enter password:"
+       			READ PASSWORD
+
+			IF USERNAME = "admin" AND PASSWORD = "1234" THEN
+           			 DISPLAY "Login Successful"
+            			 SET LOGGED_IN = TRUE
+        		ELSE
+            			DISPLAY "Invalid Login"
+            			SET ATTEMPTS = ATTEMPTS - 1
+            			DISPLAY "Remaining attempts: ", ATTEMPTS
+        		END IF
+
+	      END REPEAT
+
+	      IF LOGGED_IN = FALSE THEN
+        		DISPLAY "Account Locked"
+    	      END IF
+
+	END
+STOP
+
+Task 14 :
+
+START
+
+	BEGIN
+
+		DECLARE CHOICE 
+		SET CHOICE = 0 
+   		
+
+		WHILE CHOICE NOT Equal 4
+
+			DISPLY " 1. Enter 5 student scores "
+			DISPLY " 2. Show full report  "
+			DISPLY " 3. Reset all data  "
+			DISPLY " 4. Logout  "
+	
+			DISPLAY "Enter your choice: "
+        		READ CHOICE
+
+			
+
+		    IF CHOICE = 1 THEN
+			
+				Declare number1 , number2 
+   				DISPLY "Enter Number1 : "  
+  				READ number1 
+            			
+				
+   				DISPLY "Enter Number2 : "  
+  				READ number2
+
+				result = number1 + number2 
+				DISPLY result  
+            			
+            
+            				
+
+       
+        	    ELSE IF CHOICE = 2 THEN
+
+            			Declare even 
+   				DISPLY "Enter Number : "  
+  				READ even 
+
+				IF even mod 2 = 0 
+					DISPLY "EVEN " 
+				ELSE IF 
+					DISPLY "ODD "
+    
+
+        
+         	    ELSE IF CHOICE = 3 THEN
+
+			For number from 1 to 5 
+				DISPLAY number 
+			END REPEAT
+
+
+		    ELSE IF CHOICE = 4 THEN
+
+            		DISPLAY "Program Ended"
+
+        
+        	    ELSE
+
+            		DISPLAY "Invalid Choice"
+
+       		    END IF
+
+           END REPEAT
+
+		
+	END
+STOP
+
+
+Task 15 :
+
+START
+
+	BEGIN
+
+	DECLARE USERNAME, PASSWORD,  ATTEMPTS, LOGGED_IN , CHOICE, SCORE, TOTAL, AVERAGE
+        EXCELLENT_COUNT, PASS_COUNT, FAIL_COUNT
+
+	SET CHOICE = 0
+
+	
+	WHILE CHOICE NOT Equal 3
+
+			DISPLY " 1. Enter 5 student scores "
+			DISPLY " 2. Show full report  "
+			DISPLY " 3. Reset all data  "
+			DISPLY " 4. Logout  "
+	
+			DISPLAY "Enter your choice: "
+        		READ CHOICE
+
+
+		 	IF CHOICE = 1 THEN
+            			SET TOTAL = 0
+
+            
+            				 FOR i = score TO 3
+                				DISPLAY "Enter score for student "
+                				READ SCORE
+
+               
+                				SET TOTAL = TOTAL + SCORE
+            				END REPEAT
+
+           
+           			 SET AVERAGE = TOTAL / 3
+
+            
+           			 DISPLAY "Total Score: ", TOTAL
+            			 DISPLAY "Average Score: ", AVERAGE
+
+       
+        	      ELSE IF CHOICE = 2 THEN
+
+            			DISPLAY "Enter a number:"
+            			READ NUMBER
+
+            
+            			FOR score = 1 TO 5
+
+                			DISPLAY NUMBER
+            			END REPEAT
+
+        
+         	     ELSE IF CHOICE = 3 THEN
+
+            		DISPLAY "Program Ended"
+
+        
+        	    ELSE
+            		DISPLAY "Invalid Choice"
+       		    END IF
+
+           END REPEAT
+            			
+            			
+
+		
+
+	END
+
+STOP
+
+Task 16 :
+
+START
+
+	BEGIN
+
+		DECLARE USERNAME, PASSWORD,  ATTEMPTS, LOGGED_IN , CHOICE, SCORE, TOTAL, AVERAGE
+                EXCELLENT_COUNT, PASS_COUNT, FAIL_COUNT
+
+		SET CHOICE = 0
+		SET TOTAL = 0
+		SET EXCELLENT_COUNT = 0
+		SET PASS_COUNT = 0
+		SET FAIL_COUNT = 0
+		
+
+		
+		WHILE CHOICE NOT Equal 3
+
+			DISPLY " 1. Enter 5 student scores "
+			DISPLY " 2. Show full report  "
+			DISPLY " 3. Reset all data  "
+			DISPLY " 4. Logout  "
+	
+			DISPLAY "Enter your choice: "
+        		READ CHOICE
+
+		IF CHOICE EQUALS 1 THEN
+            			SET TOTAL =  0
+            			SET EXCELLENT_COUNT = 0
+            			SET PASS_COUNT = 0
+            			SET FAIL_COUNT = 0
+
+
+           	        FOR Score 1 TO 5
+               	
+                    		DISPLAY "Enter score for student : "
+                    		READ SCORE
+                    			IF SCORE < 0 OR SCORE > 100 THEN
+                        			DISPLAY "Invalid Score"
+                   			 END IF
+                		FOR SCORE >= 0 AND SCORE <= 100
+                		SET TOTAL = TOTAL + SCORE
+
+                		IF SCORE >= 85 THEN
+                    			DISPLAY "Excellent"
+                    			SET EXCELLENT_COUNT = EXCELLENT_COUNT + 1
+                		ELSE IF SCORE >= 50 THEN
+                   			 DISPLAY "Pass"
+                   			 SET PASS_COUNT = PASS_COUNT + 1
+                		ELSE
+                    			DISPLAY "Fail"
+                    			SET FAIL_COUNT = FAIL_COUNT + 1
+               		 	END IF
+
+            		END REPEAT
+            		SET AVERAGE = TOTAL / 5
+
+        
+        		IF CHOICE EQUALS 2 THEN
+
+           			DISPLAY "Total Score: ", TOTAL
+           			DISPLAY "Average Score: ", AVERAGE
+           			DISPLAY "Excellent Students: ", EXCELLENT_COUNT
+            			DISPLAY "Passed Students: ", PASS_COUNT
+             			DISPLAY "Failed Students: ", FAIL_COUNT
+
+			ELSE IF CHOICE EQUALS 3 THEN
+
+           			 DISPLAY "Logged Out"
+
+       		 	ELSE
+
+           			 DISPLAY "Invalid Choice"
+               		END IF
+		
+			
+
+		END IF 	
+	    ND REPEAT
+
+ 
+	END
+
+STOP
+
+
+Task 17 :
+
+START
+
+	BEGIN
+
+		DECLARE USERNAME, PASSWORD,  ATTEMPTS, LOGGED_IN , CHOICE, SCORE, TOTAL, AVERAGE
+                EXCELLENT_COUNT, PASS_COUNT, FAIL_COUNT
+
+		SET ATTEMPTS = 3
+    		SET LOGGED_IN = FALSE
+
+		WHILE ATTEMPTS > 0 AND LOGGED_IN = FALSE
+       			DISPLAY "Enter Username: "
+        		READ USERNAME
+       			DISPLAY "Enter password: "
+       			READ PASSWORD
+
+			IF USERNAME EQUALS "admin" AND PASSWORD EQUALS "1234" THEN
+           			DISPLAY "Login Successful"
+            			SET LOGGED_IN = TRUE
+       			ELSE
+            			DISPLAY "Invalid Login"
+            		SET ATTEMPTS = ATTEMPTS - 1
+        		END IF
+    		END REPEAT
+
+		IF LOGGED_IN = FALSE THEN
+        		DISPLAY "Account Locked"
+        	
+    		END IF
+
+		SET CHOICE = 0
+
+		
+		WHILE CHOICE NOT Equal 3
+
+			DISPLY " 1. Enter 5 student scores "
+			DISPLY " 2. Show full report  "
+			DISPLY " 3. Reset all data  "
+			DISPLY " 4. Logout  "
+	
+			DISPLAY "Enter your choice: "
+        		READ CHOICE
+
+			IF CHOICE EQUALS 1 THEN
+            			
+
+
+           	        FOR Score 1 TO 5
+               	
+                    		DISPLAY "Enter score for student : "
+                    		READ SCORE
+                    			IF SCORE < 0 OR SCORE > 100 THEN
+                        			DISPLAY "Invalid Score"
+                   			 END IF
+                		FOR SCORE >= 0 AND SCORE <= 100
+                		SET TOTAL = TOTAL + SCORE
+
+                		IF SCORE >= 85 THEN
+                    			DISPLAY "Excellent"
+                    			SET EXCELLENT_COUNT = EXCELLENT_COUNT + 1
+                		ELSE IF SCORE >= 50 THEN
+                   			 DISPLAY "Pass"
+                   			 SET PASS_COUNT = PASS_COUNT + 1
+                		ELSE
+                    			DISPLAY "Fail"
+                    			SET FAIL_COUNT = FAIL_COUNT + 1
+               		 	END IF
+
+            		END REPEAT
+            		SET AVERAGE = TOTAL / 5
+
+        
+        		ELSEIF CHOICE EQUALS 2 THEN
+
+           			DISPLAY "Total Score: ", TOTAL
+           			DISPLAY "Average Score: ", AVERAGE
+           			DISPLAY "Excellent Students: ", EXCELLENT_COUNT
+            			DISPLAY "Passed Students: ", PASS_COUNT
+             			DISPLAY "Failed Students: ", FAIL_COUNT
+
+			ELSE IF CHOICE EQUALS 3 THEN
+
+           			 DISPLAY "Logged Out"
+
+       		 	ELSE
+
+           			 DISPLAY "Invalid Choice"
+               		END IF
+		
+			
+
+		END IF 	
+	    ND REPEAT
+
+ 
+	END
+
+STOP
+
+
+
+
+Task 18 :
+
+START
+
+	BEGIN
+
+		Declare  USERNAME and PASSWORD , ROLE, CHOICE, TOTAL, AVERAGE			
+		
+		SET LOGGED_IN = FALSE 
+		SET EXCELLENT_COUNT = 0, PASS_COUNT = 0 , FAIL_COUNT = 0 , ATTEMPTS = 3
+
+		WHILE ATTEMPTS greater than 0 AND LOGGED_IN equal FALSE 
+
+			DISPLY "Enter your name   : "
+			READ USERNAME
+			DISPLY "Enter password   : "
+			READ PASSWORD
+
+			IF   username == "admin" AND  password == "1234"  THEN   
+				SET ROLE equal "Admin" 
+				SET LOGGED_IN  equal "TRUE" 
+		 		DISPLY "Login Successful"
+
+     			ELSEIF username == "teacher" AND  password == "5678"  THEN   
+				SET ROLE equal "Teacher" 
+				SET LOGGED_IN  equal "TRUE" 
+		 		DISPLY "Login Successful"
+
+			ELSE
+    			 	DISPLY "Invalid Login"
+				SET ATTEMPTS = ATTEMPTS -1 
+  		
+    			 	
+  			END IF
+
+		END REPEAT
+
+
+
+ 		IF LOGGED_IN = FALSE THEN
+
+       			 DISPLAY "Account Locked" 
+			 STOP IF NUMBER OF ATTAMPS CROSS THE LIMET 3 
+		END IF
+
+		SET CHOICE = 0
+   		
+
+
+		WHILE  LOGGED_IN = TRUE 
+			
+			
+			IF   username == "admin" THEN 
+   
+		 		DISPLY " 1. Enter 5 student scores "
+				DISPLY " 2. Show full report  "
+				DISPLY " 3. Reset all   "
+				DISPLY " 4. Logout  "
+
+
+			ELSEIF username == "Teacher" THEN 
+   
+		 		DISPLY " 1. Enter 5 student scores  "
+				DISPLY " 2. Show full report  "
+				DISPLY " 3. Logout "
+			END IF
+
+			DISPLAY "Enter your choice:"
+        		READ CHOICE
+
+
+           	        IF CHOICE = 1 THEN
+            			
+
+				FOR SCORE FROM 1 to 5 
+
+					DISPLAY "Enter SCORE for student : "
+                    			READ SCORE
+
+                    			IF SCORE < 0 OR SCORE > 100 THEN
+                        			DISPLAY "Invalid Score"
+                    			END IF
+
+					
+
+					SET TOTAL = TOTAL + SCORE
+
+					IF SCORE >= 85 THEN
+                   			 	DISPLAY "Excellent"
+                    			 	SET EXCELLENT_COUNT = EXCELLENT_COUNT + 1
+                			ELSE IF SCORE >= 50 THEN
+                   				 DISPLAY "Pass"
+                    				SET PASS_COUNT = PASS_COUNT + 1
+                			ELSE
+                    				DISPLAY "Fail"
+                    				SET FAIL_COUNT = FAIL_COUNT + 1
+                			END IF
+
+            		      END REPEAT
+			      
+			      SET AVERAGE = TOTAL / 5
+				
+                    	ELSE IF CHOICE = 2 THEN
+            
+            			DISPLAY "Total Score: " TOTAL
+            			DISPLAY "Average Score: " AVERAGE
+           			DISPLAY "Number of Excellent Students: " EXCELLENT_COUNT
+            			DISPLAY "Number of Passed Students: " PASS_COUNT
+            			DISPLAY "Number of Failed Students: " FAIL_COUNT
+
+	
+			ELSE IF ROLE = "Admin" AND CHOICE = 3 THEN
+            			SET TOTAL = 0
+            			SET AVERAGE = 0
+            			SET EXCELLENT_COUNT = 0
+            			SET PASS_COUNT = 0
+            			SET FAIL_COUNT = 0
+            			
+
+
+        		ELSE IF ROLE = "Teacher" AND CHOICE = 3 THEN
+            
+				DISPLAY "Logged Out"
+            			LOGGED_IN = FALSE
+        		ELSE IF ROLE = "Admin" AND CHOICE = 4 THEN
+
+            			DISPLAY "Logged Out"
+            			LOGGED_IN = FALSE
+
+			ELSE
+            			DISPLAY "Invalid Choice"
+			
+
+		        END IF 	
+
+	    END REPEAT
+
+ 
+	END
+
+STOP
