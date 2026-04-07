@@ -1,0 +1,48 @@
+
+
+NORMAL WAY : 
+
+START
+	BEGIN 
+	number = 1234 
+	reverse = (number % 10) * 1000 + ((number / 10) % 10) * 100 + ((number / 100) % 10) * 10 + (number / 1000)
+	DISPLAY reverse
+	END 
+END  
+
+
+- we can use that user reminder as the whole number mod 10 = 4 --- and follow the other numbers by this (1234 -> 123 -> 12 -> 1 ) all mod 10 that will give us (4321)
+
+- we can use an easer way that mode the number first then we multibladed by the 1000 the we divided the number again be 10 and then mod by 10 and multibladed by 100 and that eels . 
+
+
+IF STATMENT WAY :
+
+START
+    BEGIN
+        number = 1234
+        IF number >= 1000 AND number <= 9999 THEN
+            reverse = (number % 10) * 1000 + ((number / 10) % 10) * 100 + ((number / 100) % 10) * 10 + (number / 1000)
+            DISPLAY reverse
+    END
+END
+
+
+WHILE LOOP : 
+
+START
+    BEGIN
+        number = 1234
+        reverse = 0
+        temp = number
+        
+        WHILE temp > 0 
+            digit = temp % 10
+            reverse = reverse * 10 + digit
+            temp = temp / 10
+        END WHILE
+        
+        DISPLAY reverse
+    END
+END 
+

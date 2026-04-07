@@ -1,0 +1,40 @@
+
+NUM = 99998787        -|
+REVNUMBER = 0          |->   1st iteration 
+REMAINDER = 7          |  
+NUM = 9999878         -|
+
+NUM = 9999878         -|
+REVNUMBER = 78         |->   2st iteration 
+REMAINDER = 8          |  
+NUM = 999987          -|
+
+NUM = 999987          -|
+REVNUMBER = 787        |->   3st iteration 
+REMAINDER = 7          |  
+NUM = 99998           -|
+
+NUM = 99998           -|
+REVNUMBER = 7878       |->   4st iteration 
+REMAINDER = 8          |  
+NUM = 9999            -|
+
+NUM = 9999            -|
+REVNUMBER = 78789      |->   5st iteration 
+REMAINDER = 9          |  
+NUM = 999             -|
+
+NUM = 999             -|
+REVNUMBER = 787899     |->   6st iteration 
+REMAINDER = 9          |  
+NUM = 99              -|
+
+NUM = 99              -|
+REVNUMBER = 7878999    |->   7st iteration 
+REMAINDER = 9          |  
+NUM = 9               -|
+
+NUM = 9               -|
+REVNUMBER = 78789999   |->   8st iteration 
+REMAINDER = 9          |  
+NUM = 0               -|
