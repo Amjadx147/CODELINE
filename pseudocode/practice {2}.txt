@@ -16,7 +16,7 @@ START
      THEH
      DISPLY Allowed 
      ELSE 
-     DISPLY Allowed
+     DISPLY Not Allowed
    END IF	
    
   
@@ -207,10 +207,10 @@ START
 
 		FOR number 1 TO 10 DO
         	IF number MOD 2 = 0 
-		THEN
+			THEN
                 DISPLAY number
-                ENDIF
-                END REPEAT
+            ENDIF
+        END REPEAT
  
 	END
 
