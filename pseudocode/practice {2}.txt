@@ -1,0 +1,218 @@
+Task 1 : 
+
+START
+
+  
+
+   SET username , age 
+   DISPLY "Enter your name : "  
+   READ username 
+   DISPLY " Enter you age " 
+   READ age 
+
+   DISPLY "WELCOME " + username 
+
+   IF age Greater than or Equal  18 
+     THEH
+     DISPLY Allowed 
+     ELSE 
+     DISPLY Allowed
+   END IF	
+   
+  
+
+STOP
+
+Task 2 : 
+
+
+START
+
+ BEGIN
+	SET Student name , Score 
+	DISPLY "Enter your name : "
+	READ Student name 
+	DISPLY "Enter your Score : "
+	READ Score
+
+	DISPLY  Student name
+
+	IF Score Greater than or Equal  50
+     	   THEH
+    	   DISPLY "Pass"
+        ELSE
+           DISPLY "Fail"
+   END IF
+ END
+
+
+	
+
+
+STOP
+
+Task 3 :
+
+START
+
+	BEGIN
+    		FOR counter  1 TO 5 DO
+       			DISPLAY counter
+    		END REPEAT
+	END
+STOP
+
+Task 4 :
+
+START
+
+	BEGIN
+
+		SET COUNT = 5
+   		WHILE COUNT greater than 0 DO
+        	DISPLAY COUNT
+        	COUNT = COUNT - 1
+   		END REPEAT
+		
+	END
+STOP
+
+
+Task 5 :
+
+START
+
+	BEGIN
+
+		SET age and ID status 
+		DISPLY "Enter your Age : "
+		READ Student age
+		DISPLY "Do you have an ID card : "
+		READ Student ID status
+
+		IF age Greater than or Equal  18 and  ID status is TRUE 
+     		THEH
+    		 	DISPLY "Access Granted"
+     		ELSE
+    			 DISPLY "Access Denied"
+  		END IF
+
+	END
+
+STOP
+
+Task 6 :
+
+START
+
+	BEGIN
+	
+		SET role
+		DISPLY "Enter role : "
+		READ  role
+
+		IF role == "Admin" or  role == "Manager"                                                           		THEH
+    		 	DISPLY "Access Allowed"
+     		ELSE
+    			 DISPLY "Access Denied"
+  		END IF
+
+
+
+ 
+	END
+
+STOP
+
+
+Task 7 :
+
+START
+
+	BEGIN
+
+		SET IS_ACTIVE
+		DISPLY "IS THE ACCOUNT ACTAVE ?  : "
+		READ Student IS_ACTIVE
+
+		IF   IS_ACTIVE NOT true                                                        	
+		THEH
+    		 	DISPLY "Account Inactive"
+     		ELSE
+    			 DISPLY "Account Active"
+  		END IF
+
+
+
+ 
+	END
+
+STOP
+
+
+
+Task 8 :
+
+START
+
+	BEGIN
+
+		SET age and role
+		DISPLY "Enter your Age : "
+		READ Student age
+		DISPLY "Enter role : "
+		READ  role
+
+		IF   Age is greater than or equal to 18 AND role == "Admin" or  role == "Manager"
+		THEH
+    		 	DISPLY "Access Granted"
+     		ELSE
+    			 DISPLY "Access Denied"
+  		END IF
+
+ 
+	END
+
+STOP
+
+Task 9 :
+
+START
+
+	BEGIN
+
+		SET username and password
+		DISPLY "Enter your username : "
+		READ Student username
+		DISPLY "Enter password : "
+		READ  password
+ 
+		IF   username == "admin" AND  username == "password"    		
+		 	DISPLY "Login Successful"
+     		ELSE
+    			 DISPLY "Invalid Username or Password"
+  		END IF
+
+
+ 
+	END
+
+STOP
+
+Task 10:
+
+START
+
+	BEGIN
+
+		FOR number 1 TO 10 DO
+        	IF number MOD 2 = 0 
+		THEN
+                DISPLAY number
+                ENDIF
+                END REPEAT
+ 
+	END
+
+STOP
+
