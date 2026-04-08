@@ -1,0 +1,357 @@
+CHALLENGE 1 : 
+
+START
+
+  
+
+ 	BEGIN
+
+		Declare age , is student 
+		DISPLAY " Enter you age :  "
+        	READ age
+		
+		DISPLAY " Are you a Student ? (True , False) :   "
+        	READ is student
+
+		IF Customer age is less than 12 (age < 12) THEN
+
+            		DISPLAY " Child ticket: 2 OMR "
+
+        	ELSEIF  Customer age is equal or grater than 12 (age >= 12 ) And the Customer is Student (is student = TRUE ) THEN
+
+			DISPLAY " Student ticket: 3 OMR "
+           		 
+        	ELSEIF Customer grater than 60 (age > 60 ) THEN 
+
+			DISPLAY " Senior ticket: 2.5 OMR"
+
+		ELSE
+            		DISPLAY "Regular ticket: 5 OMR"
+            		
+        	END IF
+		
+
+		DISPLAY "Thank you for visiting!"
+
+
+	END 
+			
+   
+  
+
+STOP
+
+
+CHALLENGE 2 :
+
+START
+
+  
+
+ 	BEGIN
+
+	Declare PasswordL 
+	DISPLAY " Enter you password length (Number! ) :  "
+        READ PasswordL
+
+	
+	IF  password length lees than 6 (PasswordL < 6 ) THEN
+
+            		DISPLAY " Weak password — too short !!  "
+
+        ELSEIF password length between  6 and 10  ( 6 <= PasswordL <= 10 )  THEN
+
+			DISPLAY " Moderate password "
+
+	ELSEIF password length grater than 10 (PasswordL > 6)  THEN
+
+			DISPLAY " Strong password — well done!  "
+           		 
+	ELSE
+            		DISPLAY " WRONG PASSWORD"
+            		
+        END IF
+
+
+	IF PasswordL Not equal to 10 THEN 
+
+		
+		strong_pass = 0 
+		While PasswordL not equal to 10 DO 
+			
+			PasswordL = PasswordL + 1 
+			strong_pass = strong_pass+ 1 
+
+		DISPLAY " YOU SHOULD HAVE   " + strong_pass + " TO HAVE A STRONGE PASSWORD "
+
+	ELSE 
+
+		DISPLAY " YOU SHOULD HAVE   " No improvement needed  "
+
+	END IF
+
+
+
+	END 
+			
+   
+  
+
+STOP
+
+
+
+CHALLENGE 3 :
+
+
+START
+
+
+	BEGIN
+
+
+		Declare STUDENT , SCORE , COUNT_PASS , NOT_PASS
+  		SET COUNT_PASS = 0 
+		SET NOT_PASS = 0 
+
+ 	
+
+		FOR STUDENT FROM 1 TO 5 DO 
+
+			DISPLAY " WHAT IS YOU SCORE ? : "
+			READ SCORE 
+
+			IF SCORE IS ABOVE 90 THEN 
+
+				DISPLAY " A "
+			
+
+			IFESLE SCORE BETWEEN 89 AND 75 AND EQUAL THEM THEN 
+
+				DISPLAY " B "
+				COUNT_PASS + 1 
+
+			IFESLE SCORE BETWEEN 74 AND 60 AND EQUAL THEM THEN 
+
+				DISPLAY " C "
+				COUNT_PASS + 1 
+
+			IFESLE SCORE BETWEEN 59 AND 50 AND EQUAL THEM THEN 
+
+				DISPLAY " D : "
+				COUNT_PASS + 1 
+
+			IFESLE SCORE LEES THAN 50 THEN 
+
+				DISPLAY " F "
+
+			ELSE
+            			DISPLAY " WRONG SCORE "
+				NOT_PASS + 1 
+            		
+      	   		END IF
+		
+		END REPEAT
+
+		DISPLAY " YOU TOTAL NUMBER OF PASS :  " + COUNT_PASS 
+		DISPLAY " YOU TOTAL NUMBER OF FALE :  " + NOT_PASS
+
+		
+
+
+	END 
+			
+   
+  
+
+STOP
+
+
+
+
+
+
+CHALLENGE 4 :
+
+
+START
+
+
+	BEGIN
+
+	DECLAR START_BALANCE , WITHDRAWL_COUNTEER , WITHDRAW
+
+	SET START_BALANCE = 500 
+	SET WITHDRAWL_COUNTEER = 0 
+	SET WITHDRAW = 0 
+
+	WHILE 	WITHDRAWL_COUNTEER IS LESS THAN 3 AND START_BALANCE IS GRATER THAN 0 THEN 
+	
+		
+		DISPLAY " HOW MUCH YOU WANT TO WITHDRAW ? :   " 
+		READ WITHDRAW
+
+		IF WITHDRAW IS GRATER THAN THE START_BALANCE THEN 
+
+			DISPLAY " Insufficient funds. Try a smaller amount  " 
+			
+		ELSEIF WITHDRAW IS 0 OR BELOW 0 THEN 
+
+			DISPLAY " Invalid amount " 
+
+		ELSE 
+
+			START_BALANCE = WITHDRAW - START_BALANCE
+			WITHDRAWL_COUNTEER = WITHDRAWL_COUNTEER + 1 
+			DISPLAY " YOU NEW BALANCE IS :  " + START_BALANCE
+
+		ENDIF 
+
+	END REPATER 
+
+	DISPLAY " Session ended Final balance : " + START_BALANCE
+			
+		
+	
+
+
+
+	END 
+			
+   
+  
+
+STOP
+
+
+CHALLENGE 5 :
+
+START
+
+
+	BEGIN
+
+		DECLARE SECRUT_NUMBER , ATTEMPT , PLYAR_GUESS , GUESS , 
+
+		SET SECRUT_NUMBER = 42 
+		SET ATTEMPT = 5 
+		PLYAR_GUESS = FALSE
+		GUESS = 0 
+	
+		
+
+		WHILE ATTEMP IS NOT EQUAL 0 AND PLYAR_GUESS  IS FALSE  THEN 
+
+			DISPLAY " YOU HAVE LEFT WITH   " +  SET ATTEMPT
+
+			DISPLAY " ENTER YOUR GUSS :  "
+			READ GUSS 
+
+			IF GUSS THAT PLAYER IS LOW THAN SECRUT_NUMBERTHEN 
+
+				DISPLAY " Too low! Try higher "
+				ATTEMPT  = ATTEMPT - 1
+
+			IFELSE THAT PLAYER IS GRATER THAN SECRUT_NUMBER THEN 
+
+				DISPLAY " Too high! Try lower  "
+				ATTEMPT  = ATTEMPT - 1	
+
+
+			ELSE 
+
+				DISPLAY " Correct! You got it !  "
+			ENDIF
+
+		END REPETER 
+
+		DISPLAY " Game over. The number was 42  "
+
+		
+
+	END 
+			
+   
+  
+
+STOP
+
+
+
+CHALLENGE 6 :
+
+START
+
+
+	BEGIN
+
+		DECLAER ITEM_NUMBER , TOTAL , ITEM_PRICE 
+			
+		SET IYEM_NUMBER = 0 
+		SET Sandwich = 1.2 
+		SET Juice =  0.5 
+		SET Salad = 0.8 
+		SET Dessert  = 1.0 
+		SET TOTAL = 0 
+
+
+
+		DISPLAY " 1. Sandwich = 1.2 OMR     "
+		DISPLAY " 2. Juice    = 0.5 OMR     "
+		DISPLAY " 3. Salad    = 0.8 OMR     "
+		DISPLAY " 4. Dessert  = 1.0 OMR     "
+
+
+		FOR ITEM START WITH 1 END WITH 4 (4 TIME FOR LOOP)
+
+			DISPLAY " ENTER ITEM NAME THAT YOU WNAT TO PAY : "
+			READ ITEM_NUMBER 
+
+			IF USER ENTER 1 THEN 
+				TOTAL = TOTAL + Sandwich 
+				DISPLAY " ADDED [Sandwich] "
+	
+			IFELSE  USER ENTER 2 THEN 
+				TOTAL = TOTAL + Juice 
+				DISPLAY " ADDED [Juice] "
+
+			IFELSE  USER ENTER 3 THEN 
+				TOTAL = TOTAL + Salad 
+				DISPLAY " ADDED [Salad] "
+
+			IFELSE  USER ENTER 4 THEN 
+				TOTAL = TOTAL + Dessert 
+				DISPLAY " ADDED [Dessert] "
+
+			ELSE 
+
+				DISPLAY " ADDED [Item not found] "
+			
+			ENDIF
+			
+		END REPETER 
+
+		DISPLAY " TOTAL COST IS :  "	+  TOTAL 
+
+		IF TOTAL IS GRATERT OR EQUAL TO 3 THEN 
+			
+			TOTAL = TOTAL * 10%
+
+		ELSE
+
+			DISPLAY " No discount applied "
+
+
+			
+
+
+		
+
+
+
+	END 
+			
+   
+  
+
+STOP
